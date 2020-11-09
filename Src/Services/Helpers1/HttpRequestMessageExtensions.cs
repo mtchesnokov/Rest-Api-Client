@@ -3,7 +3,7 @@ using System.Net.Http;
 
 namespace Tch.HttpClient.Services.Helpers1
 {
-   public static class HttpRequestMessageExtensions
+   internal static class HttpRequestMessageExtensions
    {
       public static void AddHttpHeaders(this HttpRequestMessage httpRequestMessage, Dictionary<string, string> httpHeaders)
       {

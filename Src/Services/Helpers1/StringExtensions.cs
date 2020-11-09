@@ -7,7 +7,7 @@ namespace Tch.HttpClient.Services.Helpers1
 {
    internal static class StringExtensions
    {
-      public static HttpContent ToHttpContent(this string jsonText)
+      private static HttpContent ToHttpContent(this string jsonText)
       {
          return new StringContent(jsonText, Encoding.UTF8, "application/json");
       }

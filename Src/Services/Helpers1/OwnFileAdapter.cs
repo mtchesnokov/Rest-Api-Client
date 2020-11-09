@@ -1,11 +1,13 @@
 ﻿using System.Net.Http;
 using System.Threading.Tasks;
+using Tch.HttpClient.Domain.Objects;
+using Tch.HttpClient.Interfaces.Helpers;
 
 namespace Tch.HttpClient.Services.Helpers1
 {
-   internal class OwnFileAdapter : IHttpResponseMessageAdapter<OwnFile>
+   internal class OwnFileAdapter : IAdapterAsync<HttpResponseMessage, OwnFile>
    {
-      public async Task<OwnFile> Adapt(HttpResponseMessage httpResponseMessage)
+      public async Task<OwnFile> AdaptAsync(HttpResponseMessage httpResponseMessage)
       {
          var content = await httpResponseMessage.Content.ReadAsByteArrayAsync();
 

@@ -23,7 +23,7 @@ namespace Tch.HttpClient.Services.Helpers
 
       public Task<HttpResponseMessage> Delete(string url, string jsonText, Dictionary<string, string> httpHeaders)
       {
-         var request = jsonText.ToSingleContentHttpRequest(httpHeaders);
+         SingleContentHttpRequest request = jsonText.ToSingleContentHttpRequest(httpHeaders);
          return _singleTypeHttpService.Send(HttpMethod.Delete, url, request);
       }
    }
