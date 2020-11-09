@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>2.0.1</Version>
+    <PackageIconUrl>https://user-images.githubusercontent.com/19304930/74634985-581c0700-5165-11ea-80d4-9843307093f7.png</PackageIconUrl>
+    <Description>This package contains help services to simplify making http requests to external systems</Description>
+    <Authors>Mikhail Tchesnokov</Authors>
+    <Company>IntraData</Company>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>c:\Projects\Nuget\Development\Nuget\IntraOffice.Nuget.HttpClient\Src\bin\Release\IntraOffice.Nuget.HttpClient.xml</DocumentationFile>
+    <NoWarn>1701;1702;1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Services\Helpers\**" />
+    <EmbeddedResource Remove="Services\Helpers\**" />
+    <None Remove="Services\Helpers\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Domain\Objects\HttpResponseVm1.cs" />
+    <Compile Remove="Domain\Objects\HttpResponseVm2.cs" />
+    <Compile Remove="Interfaces\IHttpDeleteService.cs" />
+    <Compile Remove="Interfaces\IHttpGetService.cs" />
+    <Compile Remove="Interfaces\IHttpPatchService.cs" />
+    <Compile Remove="Interfaces\IHttpPutService.cs" />
+    <Compile Remove="Services\HttpDeleteService.cs" />
+    <Compile Remove="Services\HttpGetService.cs" />
+    <Compile Remove="Services\HttpPatchService.cs" />
+    <Compile Remove="Services\HttpPutService.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+</Project>

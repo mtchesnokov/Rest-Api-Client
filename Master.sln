@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29025.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{F5B7F8D3-D7CA-4C16-862C-609E8CCDF622}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{26E4A4EF-F998-4148-880F-4E02CD47B7A2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Development", "Development", "{0E44A4AF-3E9A-4C9A-8778-F32B5FC5B460}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tch.HttpClient", "Src\Tch.HttpClient.csproj", "{9B2BBA32-7766-4774-9521-448233391808}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tch.HttpClient.UnitTests", "Tests\intraOffice.Nuget.HttpClient.UnitTests\Tch.HttpClient.UnitTests.csproj", "{ADA429CE-8B8B-4302-8D57-4C9D22735E9B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tch.HttpClient.IntTests", "Tests\IntraOffice.Nuget.HttpClient.IntTests\Tch.HttpClient.IntTests.csproj", "{0C3AF4D7-EE4F-40CE-BA81-0ABF227494DB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F1B493B4-D0F6-43D5-B5B3-9DB147CDCBB8}"
+	ProjectSection(SolutionItems) = preProject
+		Readme.md = Readme.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tch.FakeApi", "Development\IntraOffice.DevServer\Tch.FakeApi.csproj", "{A130F3E8-0C07-4613-91E3-D2DA31886AAB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9B2BBA32-7766-4774-9521-448233391808}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B2BBA32-7766-4774-9521-448233391808}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B2BBA32-7766-4774-9521-448233391808}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B2BBA32-7766-4774-9521-448233391808}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADA429CE-8B8B-4302-8D57-4C9D22735E9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADA429CE-8B8B-4302-8D57-4C9D22735E9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADA429CE-8B8B-4302-8D57-4C9D22735E9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADA429CE-8B8B-4302-8D57-4C9D22735E9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C3AF4D7-EE4F-40CE-BA81-0ABF227494DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C3AF4D7-EE4F-40CE-BA81-0ABF227494DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C3AF4D7-EE4F-40CE-BA81-0ABF227494DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C3AF4D7-EE4F-40CE-BA81-0ABF227494DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A130F3E8-0C07-4613-91E3-D2DA31886AAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A130F3E8-0C07-4613-91E3-D2DA31886AAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A130F3E8-0C07-4613-91E3-D2DA31886AAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A130F3E8-0C07-4613-91E3-D2DA31886AAB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9B2BBA32-7766-4774-9521-448233391808} = {F5B7F8D3-D7CA-4C16-862C-609E8CCDF622}
+		{ADA429CE-8B8B-4302-8D57-4C9D22735E9B} = {26E4A4EF-F998-4148-880F-4E02CD47B7A2}
+		{0C3AF4D7-EE4F-40CE-BA81-0ABF227494DB} = {26E4A4EF-F998-4148-880F-4E02CD47B7A2}
+		{A130F3E8-0C07-4613-91E3-D2DA31886AAB} = {0E44A4AF-3E9A-4C9A-8778-F32B5FC5B460}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2890483F-0A74-4A08-A2DA-6FD1B3D640DA}
+	EndGlobalSection
+EndGlobal
