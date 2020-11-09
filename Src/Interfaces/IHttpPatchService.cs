@@ -1,15 +1,15 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace IntraOffice.Nuget.HttpClient.Interfaces
+namespace Tch.HttpClient.Interfaces
 {
    /// <summary>
    ///    Service to send 'PATCH' http requests
    /// </summary>
-   public interface IHttpPatchService<THttpResponse>
+   public interface IHttpPatchService
    {
-      Task<THttpResponse> PatchModel<TModel>(string url, TModel model, Dictionary<string, string> httpHeaders = null);
+      Task<THttpResponse> PatchModel<THttpResponse>(string url, object model = null, Dictionary<string, string> httpHeaders = null);
 
-      Task<THttpResponse> PatchJson(string url, string jsonText, Dictionary<string, string> httpHeaders = null);
+      Task<THttpResponse> PatchJson<THttpResponse>(string url, string jsonText = null, Dictionary<string, string> httpHeaders = null);
    }
 }

@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
-using IntraOffice.Nuget.HttpClient.Domain.Helpers;
-using IntraOffice.Nuget.HttpClient.Interfaces.Helpers;
-using IntraOffice.Nuget.HttpClient.Interfaces.Helpers1;
-using IntraOffice.Nuget.HttpClient.Services.Helpers.StringExtensions;
+using Tch.HttpClient.Domain.Helpers;
+using Tch.HttpClient.Interfaces.Basic;
+using Tch.HttpClient.Interfaces.Helpers;
+using Tch.HttpClient.Services.Helpers1;
 
-namespace IntraOffice.Nuget.HttpClient.Services.Helpers
+namespace Tch.HttpClient.Services.Helpers
 {
    internal class HttpDeleteServiceInternal : IHttpDeleteServiceInternal
    {
@@ -21,11 +21,10 @@ namespace IntraOffice.Nuget.HttpClient.Services.Helpers
 
       #endregion
 
-      public async Task<HttpResponseMessage> DeleteJson(string url, string jsonText, Dictionary<string, string> httpHeaders)
+      public Task<HttpResponseMessage> Delete(string url, string jsonText, Dictionary<string, string> httpHeaders)
       {
          var request = jsonText.ToSingleContentHttpRequest(httpHeaders);
-         var httpResponseMessage = await _singleTypeHttpService.Send(HttpMethod.Delete, url, request);
-         return httpResponseMessage;
+         return _singleTypeHttpService.Send(HttpMethod.Delete, url, request);
       }
    }
 }

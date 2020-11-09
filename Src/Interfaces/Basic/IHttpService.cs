@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Tch.HttpClient.Domain.Objects;
 
-namespace Tch.HttpClient.Interfaces.Helpers1
+namespace Tch.HttpClient.Interfaces.Basic
 {
    /// <summary>
    ///    This interface represents handy decorator service to send single/multi content-type http requests

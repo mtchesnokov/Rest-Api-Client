@@ -2,16 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
-using IntraOffice.Nuget.HttpClient.Domain.Helpers;
-using IntraOffice.Nuget.HttpClient.Interfaces.Helpers;
-using IntraOffice.Nuget.HttpClient.Interfaces.Helpers1;
-using IntraOffice.Nuget.HttpClient.Services.Helpers.StringExtensions;
+using Tch.HttpClient.Domain.Helpers;
+using Tch.HttpClient.Interfaces.Basic;
+using Tch.HttpClient.Interfaces.Helpers;
+using Tch.HttpClient.Services.Helpers1;
 
-namespace IntraOffice.Nuget.HttpClient.Services.Helpers
+namespace Tch.HttpClient.Services.Helpers
 {
-   /// <summary>
-   ///    Implementation of <see cref="IHttpPatchServiceInternal" />
-   /// </summary>
    internal class HttpPatchServiceInternal : IHttpPatchServiceInternal
    {
       private readonly IHttpService<SingleContentHttpRequest> _singleTypeHttpService;
@@ -25,10 +22,10 @@ namespace IntraOffice.Nuget.HttpClient.Services.Helpers
 
       #endregion
 
-      public async Task<HttpResponseMessage> PatchJson(string url, string jsonText, Dictionary<string, string> httpHeaders)
+      public Task<HttpResponseMessage> Patch(string url, string jsonText, Dictionary<string, string> httpHeaders)
       {
          var request = jsonText.ToSingleContentHttpRequest(httpHeaders);
-         return await _singleTypeHttpService.Send(new HttpMethod("PATCH"), url, request);
+         return _singleTypeHttpService.Send(new HttpMethod("PATCH"), url, request);
       }
    }
 }

@@ -1,5 +1,5 @@
 ﻿using Newtonsoft.Json;
-using Tch.HttpClient.Interfaces.Helpers1;
+using Tch.HttpClient.Interfaces.Helpers;
 
 namespace Tch.HttpClient.Services.Helpers1
 {

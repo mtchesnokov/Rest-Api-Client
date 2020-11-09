@@ -1,20 +1,15 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using IntraOffice.Nuget.Abstractions.Domain.Objects;
 
-namespace IntraOffice.Nuget.HttpClient.Interfaces
+namespace Tch.HttpClient.Interfaces
 {
    /// <summary>
    ///    Service to send 'PUT' http requests
    /// </summary>
-   public interface IHttpPutService<THttpResponse>
+   public interface IHttpPutService
    {
-      Task<THttpResponse> PutModel<TModel>(string url, TModel model, Dictionary<string, string> httpHeaders = null);
+      Task<THttpResponse> PutModel<THttpResponse>(string url, object model = null, Dictionary<string, string> httpHeaders = null);
 
-      Task<THttpResponse> PutModel<TModel>(string url, TModel model, IEnumerable<OwnFile> files, Dictionary<string, string> httpHeaders = null);
-
-      Task<THttpResponse> PutJson(string url, string jsonText, Dictionary<string, string> httpHeaders = null);
-
-      Task<THttpResponse> PutJson(string url, string jsonText, IEnumerable<OwnFile> files, Dictionary<string, string> httpHeaders = null);
+      Task<THttpResponse> PutJson<THttpResponse>(string url, string jsonText = null, Dictionary<string, string> httpHeaders = null);
    }
 }

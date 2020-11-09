@@ -24,14 +24,13 @@
   <ItemGroup>
     <Compile Remove="Domain\Objects\HttpResponseVm1.cs" />
     <Compile Remove="Domain\Objects\HttpResponseVm2.cs" />
-    <Compile Remove="Interfaces\IHttpDeleteService.cs" />
-    <Compile Remove="Interfaces\IHttpGetService.cs" />
-    <Compile Remove="Interfaces\IHttpPatchService.cs" />
-    <Compile Remove="Interfaces\IHttpPutService.cs" />
-    <Compile Remove="Services\HttpDeleteService.cs" />
-    <Compile Remove="Services\HttpGetService.cs" />
-    <Compile Remove="Services\HttpPatchService.cs" />
-    <Compile Remove="Services\HttpPutService.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Services\Helpers\HttpDeleteServiceInternal.cs" />
+    <Compile Include="Services\Helpers\HttpGetServiceInternal.cs" />
+    <Compile Include="Services\Helpers\HttpPatchServiceInternal.cs" />
+    <Compile Include="Services\Helpers\HttpPutServiceInternal.cs" />
   </ItemGroup>
 
   <ItemGroup>

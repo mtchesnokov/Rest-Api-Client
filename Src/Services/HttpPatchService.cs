@@ -1,15 +1,12 @@
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Threading.Tasks;
-using IntraOffice.Nuget.HttpClient.Interfaces;
-using IntraOffice.Nuget.HttpClient.Interfaces.Helpers;
-using StructureMap;
+using Tch.HttpClient.Interfaces;
+using Tch.HttpClient.Interfaces.Helpers;
 
-namespace IntraOffice.Nuget.HttpClient.Services
+namespace Tch.HttpClient.Services
 {
-   /// <summary>
-   ///    Implementation of <see cref="IHttpPatchService{THttpResponse}" />
-   /// </summary>
-   public class HttpPatchService<THttpResponse> : IHttpPatchService<THttpResponse>
+   public class HttpPatchService<THttpResponse> : IHttpPatchService
    {
       private readonly IHttpPatchServiceInternal _innerService;
       private readonly IHttpResponseMessageAdapter<THttpResponse> _adapter;

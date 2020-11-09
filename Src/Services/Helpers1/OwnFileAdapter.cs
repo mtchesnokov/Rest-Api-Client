@@ -1,8 +1,7 @@
 ﻿using System.Net.Http;
 using System.Threading.Tasks;
-using IntraOffice.Nuget.Abstractions.Domain.Objects;
 
-namespace IntraOffice.Nuget.HttpClient.Services.Helpers
+namespace Tch.HttpClient.Services.Helpers1
 {
    internal class OwnFileAdapter : IHttpResponseMessageAdapter<OwnFile>
    {

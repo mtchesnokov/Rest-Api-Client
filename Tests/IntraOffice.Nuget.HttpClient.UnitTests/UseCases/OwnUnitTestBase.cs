@@ -4,7 +4,6 @@ using System.Net.Http;
 using System.Text;
 using Newtonsoft.Json;
 using NUnit.Framework;
-using Tch.HttpClient.Interfaces.Helpers1;
 using Tch.HttpClient.UnitTests.Fakes;
 
 namespace Tch.HttpClient.UnitTests.UseCases

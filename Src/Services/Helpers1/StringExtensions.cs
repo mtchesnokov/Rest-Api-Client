@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using Tch.HttpClient.Domain.Helpers;
@@ -22,7 +21,7 @@ namespace Tch.HttpClient.Services.Helpers1
             httpRequest.HttpHeaders = httpHeaders;
          }
 
-         if (!String.IsNullOrEmpty(jsonText))
+         if (!string.IsNullOrEmpty(jsonText))
          {
             httpRequest.HttpContent = jsonText.ToHttpContent();
          }

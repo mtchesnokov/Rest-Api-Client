@@ -1,15 +1,15 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace IntraOffice.Nuget.HttpClient.Interfaces
+namespace Tch.HttpClient.Interfaces
 {
    /// <summary>
    ///    This represents a handy decorator service to send 'DELETE' http requests
    /// </summary>
-   public interface IHttpDeleteService<THttpResponse>
+   public interface IHttpDeleteService
    {
-      Task<THttpResponse> DeleteModel<TModel>(string url, TModel model = null, Dictionary<string, string> httpHeaders = null) where TModel : class;
+      Task<THttpResponse> DeleteModel<THttpResponse>(string url, object model = null, Dictionary<string, string> httpHeaders = null);
 
-      Task<THttpResponse> DeleteJson(string url, string jsonText = null, Dictionary<string, string> httpHeaders = null);
+      Task<THttpResponse> DeleteJson<THttpResponse>(string url, string jsonText = null, Dictionary<string, string> httpHeaders = null);
    }
 }

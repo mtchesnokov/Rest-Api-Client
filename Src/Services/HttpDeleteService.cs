@@ -1,12 +1,12 @@
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Threading.Tasks;
-using IntraOffice.Nuget.HttpClient.Interfaces;
-using IntraOffice.Nuget.HttpClient.Interfaces.Helpers;
-using StructureMap;
+using Tch.HttpClient.Interfaces;
+using Tch.HttpClient.Interfaces.Helpers;
 
-namespace IntraOffice.Nuget.HttpClient.Services
+namespace Tch.HttpClient.Services
 {
-   public class HttpDeleteService<THttpResponse> : IHttpDeleteService<THttpResponse>
+   public class HttpDeleteService<THttpResponse> : IHttpDeleteService
    {
       private readonly IHttpResponseMessageAdapter<THttpResponse> _adapter;
       private readonly IHttpDeleteServiceInternal _innerService;
@@ -37,10 +37,5 @@ namespace IntraOffice.Nuget.HttpClient.Services
          var result = await _adapter.Adapt(httpResponseMessage);
          return result;
       }
-   }
-
-   public interface ICanStringSerializeObjectService<T>
-   {
-      string Serialize<TObject>(TObject model) where TObject : class;
    }
 }

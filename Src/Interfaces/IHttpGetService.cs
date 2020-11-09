@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using IntraOffice.Nuget.Abstractions.Domain.Objects;
+using Tch.HttpClient.Domain.Objects;
 
-namespace IntraOffice.Nuget.HttpClient.Interfaces
+namespace Tch.HttpClient.Interfaces
 {
    /// <summary>
    ///    This represents a handy decorator service to send 'GET' http requests

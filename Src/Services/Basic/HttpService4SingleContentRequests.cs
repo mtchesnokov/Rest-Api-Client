@@ -2,9 +2,10 @@
 using System.Threading.Tasks;
 using Tch.HttpClient.Domain.Helpers;
 using Tch.HttpClient.Domain.Objects;
-using Tch.HttpClient.Interfaces.Helpers1;
+using Tch.HttpClient.Interfaces.Basic;
+using Tch.HttpClient.Services.Helpers1;
 
-namespace Tch.HttpClient.Services.Helpers1
+namespace Tch.HttpClient.Services.Basic
 {
    /// <summary>
    ///    This class is implementation of <see cref="IHttpService{TRequest}" /> for 'single' mime-type http requests
@@ -15,7 +16,11 @@ namespace Tch.HttpClient.Services.Helpers1
 
       #region ctor
 
-      public HttpService4SingleContentRequests(IHttpMessageService httpMessageService)
+      public HttpService4SingleContentRequests() : this(new HttpMessageService())
+      {
+      }
+
+      internal HttpService4SingleContentRequests(IHttpMessageService httpMessageService)
       {
          _httpMessageService = httpMessageService;
       }

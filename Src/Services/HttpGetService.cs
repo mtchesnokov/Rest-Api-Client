@@ -1,26 +1,25 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using IntraOffice.Nuget.Abstractions.Domain.Objects;
-using IntraOffice.Nuget.HttpClient.Interfaces;
-using IntraOffice.Nuget.HttpClient.Interfaces.Helpers;
-using StructureMap;
+using Tch.HttpClient.Domain.Objects;
+using Tch.HttpClient.Interfaces;
+using Tch.HttpClient.Interfaces.Helpers;
+using Tch.HttpClient.Services.Helpers;
 
-namespace IntraOffice.Nuget.HttpClient.Services
+namespace Tch.HttpClient.Services
 {
-   /// <summary>
-   ///    Implementation of <see cref="IHttpGetService" />
-   /// </summary>
    public class HttpGetService : IHttpGetService
    {
       private readonly IHttpGetServiceInternal _innerService;
-      private readonly IContainer _container;
 
       #region ctor
 
-      public HttpGetService(IContainer container)
+      public HttpGetService() : this(new HttpGetServiceInternal())
       {
-         _innerService = container.GetInstance<IHttpGetServiceInternal>();
-         _container = container;
+      }
+
+      internal HttpGetService(IHttpGetServiceInternal innerService)
+      {
+         _innerService = innerService;
       }
 
       #endregion
@@ -28,6 +27,8 @@ namespace IntraOffice.Nuget.HttpClient.Services
       public async Task<TObject> GetObject<TObject>(string url, Dictionary<string, string> httpHeaders)
       {
          var httpResponseMessage = await _innerService.Get(url, httpHeaders);
+
+
          var adapter = _container.GetInstance<IHttpResponseMessageAdapter<TObject>>();
          var result = await adapter.Adapt(httpResponseMessage);
          return result;

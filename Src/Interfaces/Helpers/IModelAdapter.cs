@@ -1,4 +1,4 @@
-﻿namespace Tch.HttpClient.Interfaces.Helpers1
+﻿namespace Tch.HttpClient.Interfaces.Helpers
 {
    internal interface IModelAdapter<TModel>
    {

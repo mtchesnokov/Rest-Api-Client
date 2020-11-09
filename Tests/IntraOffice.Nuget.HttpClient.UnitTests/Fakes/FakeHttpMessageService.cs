@@ -2,7 +2,6 @@
 using System.Net.Http;
 using System.Threading.Tasks;
 using Tch.HttpClient.Domain.Objects;
-using Tch.HttpClient.Interfaces.Helpers1;
 using Tch.HttpClient.UnitTests.TestExtensions;
 
 namespace Tch.HttpClient.UnitTests.Fakes
