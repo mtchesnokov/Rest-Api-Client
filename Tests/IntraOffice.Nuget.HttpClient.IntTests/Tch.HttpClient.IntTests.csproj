@@ -23,7 +23,7 @@
     <PackageReference Include="System.Net.Http" Version="4.3.4" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Src\Tch.HttpClient.csproj" />
+    <ProjectReference Include="..\..\Src\Tch.RestClient.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="UseCases\Manual\" />

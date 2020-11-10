@@ -3,10 +3,10 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Tch.HttpClient.Domain.Helpers;
 using Tch.HttpClient.Interfaces.Basic;
-using Tch.HttpClient.Interfaces.Helpers;
+using Tch.HttpClient.Interfaces.Internals;
 using Tch.HttpClient.Services.Basic;
 
-namespace Tch.HttpClient.Services.Helpers
+namespace Tch.HttpClient.Services.Internals
 {
    internal class HttpGetServiceInternal : IHttpGetServiceInternal
    {

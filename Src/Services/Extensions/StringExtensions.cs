@@ -1,13 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
-using Tch.HttpClient.Domain.Helpers;
+using Tch.RestClient.Domain.Helpers;
 
-namespace Tch.HttpClient.Services.Helpers1
+namespace Tch.RestClient.Services.Extensions
 {
    internal static class StringExtensions
    {
-      private static HttpContent ToHttpContent(this string jsonText)
+      public static HttpContent ToHttpContent(this string jsonText)
       {
          return new StringContent(jsonText, Encoding.UTF8, "application/json");
       }

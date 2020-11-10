@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using NUnit.Framework;
-using Tch.HttpClient.Interfaces;
 
 namespace Tch.HttpClient.IntTests.UseCases.Automatic.Post
 {

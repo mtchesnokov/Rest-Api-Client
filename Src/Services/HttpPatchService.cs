@@ -1,10 +1,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Threading.Tasks;
-using Tch.HttpClient.Interfaces;
-using Tch.HttpClient.Interfaces.Helpers;
+using Tch.RestClient.Interfaces;
 
-namespace Tch.HttpClient.Services
+namespace Tch.RestClient.Services
 {
    public class HttpPatchService<THttpResponse> : IHttpPatchService
    {

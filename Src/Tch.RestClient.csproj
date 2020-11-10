@@ -16,21 +16,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Services\Helpers\**" />
-    <EmbeddedResource Remove="Services\Helpers\**" />
-    <None Remove="Services\Helpers\**" />
+    <Compile Remove="Interfaces\Internals\**" />
+    <Compile Remove="Services\Internals\**" />
+    <EmbeddedResource Remove="Interfaces\Internals\**" />
+    <EmbeddedResource Remove="Services\Internals\**" />
+    <None Remove="Interfaces\Internals\**" />
+    <None Remove="Services\Internals\**" />
   </ItemGroup>
 
   <ItemGroup>
     <Compile Remove="Domain\Objects\HttpResponseVm1.cs" />
     <Compile Remove="Domain\Objects\HttpResponseVm2.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Include="Services\Helpers\HttpDeleteServiceInternal.cs" />
-    <Compile Include="Services\Helpers\HttpGetServiceInternal.cs" />
-    <Compile Include="Services\Helpers\HttpPatchServiceInternal.cs" />
-    <Compile Include="Services\Helpers\HttpPutServiceInternal.cs" />
   </ItemGroup>
 
   <ItemGroup>

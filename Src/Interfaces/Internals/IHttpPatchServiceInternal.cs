@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace Tch.HttpClient.Interfaces.Helpers
+namespace Tch.HttpClient.Interfaces.Internals
 {
    internal interface IHttpPatchServiceInternal
    {

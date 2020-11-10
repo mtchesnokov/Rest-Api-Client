@@ -2,10 +2,9 @@
 using System.Net;
 using System.Threading.Tasks;
 using NUnit.Framework;
-using Tch.HttpClient.Domain.Objects;
-using Tch.HttpClient.Interfaces;
 using Tch.HttpClient.UnitTests.Fakes;
 using Tch.HttpClient.UnitTests.TestExtensions;
+using Tch.RestClient.Domain.Objects;
 
 namespace Tch.HttpClient.UnitTests.UseCases.Post
 {

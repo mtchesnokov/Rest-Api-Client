@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Tch.HttpClient.Domain.Objects;
 using Tch.HttpClient.UnitTests.TestExtensions;
+using Tch.RestClient.Domain.Objects;
 
 namespace Tch.HttpClient.UnitTests.Fakes
 {

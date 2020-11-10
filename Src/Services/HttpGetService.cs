@@ -1,11 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Tch.HttpClient.Domain.Objects;
-using Tch.HttpClient.Interfaces;
-using Tch.HttpClient.Interfaces.Helpers;
-using Tch.HttpClient.Services.Helpers;
+using Tch.RestClient.Domain.Objects;
+using Tch.RestClient.Interfaces;
 
-namespace Tch.HttpClient.Services
+namespace Tch.RestClient.Services
 {
    public class HttpGetService : IHttpGetService
    {

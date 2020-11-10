@@ -1,13 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Tch.HttpClient.Domain.Helpers;
-using Tch.HttpClient.Domain.Objects;
-using Tch.HttpClient.Interfaces;
-using Tch.HttpClient.Interfaces.Basic;
-using Tch.HttpClient.Services.Helpers1;
+using Tch.RestClient.Domain.Helpers;
+using Tch.RestClient.Domain.Objects;
+using Tch.RestClient.Interfaces;
+using Tch.RestClient.Interfaces.Basic;
+using Tch.RestClient.Services.Extensions;
 
-namespace Tch.HttpClient.Services
+namespace Tch.RestClient.Services
 {
    public class HttpPostService : IHttpPostService
    {
@@ -21,6 +21,16 @@ namespace Tch.HttpClient.Services
       {
          var request = jsonText.ToSingleContentHttpRequest(httpHeaders);
          return _singleTypeHttpService.Send(HttpMethod.Post, url, request, httpClientOptions);
+      }
+
+      public Task<THttpResponse> PostJson<THttpResponse>(string url, string jsonText = null, Dictionary<string, string> httpHeaders = null, HttpClientOptions httpClientOptions = null)
+      {
+         throw new System.NotImplementedException();
+      }
+
+      public Task<THttpResponse> PostModel<THttpResponse>(string url, object model = null, Dictionary<string, string> httpHeaders = null, HttpClientOptions httpClientOptions = null)
+      {
+         throw new System.NotImplementedException();
       }
    }
 }

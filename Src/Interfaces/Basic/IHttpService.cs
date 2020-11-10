@@ -1,8 +1,8 @@
 ﻿using System.Net.Http;
 using System.Threading.Tasks;
-using Tch.HttpClient.Domain.Objects;
+using Tch.RestClient.Domain.Objects;
 
-namespace Tch.HttpClient.Interfaces.Basic
+namespace Tch.RestClient.Interfaces.Basic
 {
    /// <summary>
    ///    This interface represents handy decorator service to send single/multi content-type http requests

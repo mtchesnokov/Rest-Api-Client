@@ -1,6 +1,5 @@
 ﻿using NUnit.Framework;
-using Tch.HttpClient.Domain.Exceptions;
-using Tch.HttpClient.Interfaces;
+using Tch.RestClient.Domain.Exceptions;
 
 namespace Tch.HttpClient.IntTests.UseCases.Automatic.Post
 {

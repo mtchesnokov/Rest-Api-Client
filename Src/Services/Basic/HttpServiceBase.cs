@@ -1,9 +1,9 @@
 ﻿using System.Net.Http;
 using System.Threading.Tasks;
-using Tch.HttpClient.Domain.Objects;
-using Tch.HttpClient.Interfaces.Basic;
+using Tch.RestClient.Domain.Objects;
+using Tch.RestClient.Interfaces.Basic;
 
-namespace Tch.HttpClient.Services.Basic
+namespace Tch.RestClient.Services.Basic
 {
    internal abstract class HttpServiceBase<TRequest> : IHttpService<TRequest>
    {

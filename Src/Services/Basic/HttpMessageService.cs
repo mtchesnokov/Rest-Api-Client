@@ -2,11 +2,11 @@
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Tch.HttpClient.Domain.Exceptions;
-using Tch.HttpClient.Domain.Objects;
-using Tch.HttpClient.Interfaces.Basic;
+using Tch.RestClient.Domain.Exceptions;
+using Tch.RestClient.Domain.Objects;
+using Tch.RestClient.Interfaces.Basic;
 
-namespace Tch.HttpClient.Services.Basic
+namespace Tch.RestClient.Services.Basic
 {
    internal class HttpMessageService : IHttpMessageService
    {

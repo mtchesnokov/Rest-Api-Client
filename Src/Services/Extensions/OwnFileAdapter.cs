@@ -1,9 +1,9 @@
 ﻿using System.Net.Http;
 using System.Threading.Tasks;
-using Tch.HttpClient.Domain.Objects;
-using Tch.HttpClient.Interfaces.Helpers;
+using Tch.RestClient.Domain.Objects;
+using Tch.RestClient.Interfaces.Helpers;
 
-namespace Tch.HttpClient.Services.Helpers1
+namespace Tch.RestClient.Services.Extensions
 {
    internal class OwnFileAdapter : IAdapterAsync<HttpResponseMessage, OwnFile>
    {

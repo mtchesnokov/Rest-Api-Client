@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Tch.HttpClient.Domain.Objects;
+using Tch.RestClient.Domain.Objects;
 
-namespace Tch.HttpClient.Interfaces
+namespace Tch.RestClient.Interfaces
 {
    /// <summary>
    ///    This represents a handy decorator service to send 'GET' http requests

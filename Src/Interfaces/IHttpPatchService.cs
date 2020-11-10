@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Tch.HttpClient.Interfaces
+namespace Tch.RestClient.Interfaces
 {
    /// <summary>
    ///    Service to send 'PATCH' http requests

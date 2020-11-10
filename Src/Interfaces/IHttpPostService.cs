@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Tch.HttpClient.Domain.Objects;
+using Tch.RestClient.Domain.Objects;
 
-namespace Tch.HttpClient.Interfaces
+namespace Tch.RestClient.Interfaces
 {
    /// <summary>
    ///    Service to send 'POST' http requests

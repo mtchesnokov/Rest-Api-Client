@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Tch.HttpClient.Domain.Exceptions
+namespace Tch.RestClient.Domain.Exceptions
 {
    /// <summary>
    ///    This exception is thrown when external http service has returned 502 (bad gateway)

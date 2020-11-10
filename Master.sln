@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{26E4A4EF
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Development", "Development", "{0E44A4AF-3E9A-4C9A-8778-F32B5FC5B460}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tch.HttpClient", "Src\Tch.HttpClient.csproj", "{9B2BBA32-7766-4774-9521-448233391808}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tch.RestClient", "Src\Tch.RestClient.csproj", "{9B2BBA32-7766-4774-9521-448233391808}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tch.HttpClient.UnitTests", "Tests\intraOffice.Nuget.HttpClient.UnitTests\Tch.HttpClient.UnitTests.csproj", "{ADA429CE-8B8B-4302-8D57-4C9D22735E9B}"
 EndProject

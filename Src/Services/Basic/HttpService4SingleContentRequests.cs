@@ -1,11 +1,11 @@
 ﻿using System.Net.Http;
 using System.Threading.Tasks;
-using Tch.HttpClient.Domain.Helpers;
-using Tch.HttpClient.Domain.Objects;
-using Tch.HttpClient.Interfaces.Basic;
-using Tch.HttpClient.Services.Helpers1;
+using Tch.RestClient.Domain.Helpers;
+using Tch.RestClient.Domain.Objects;
+using Tch.RestClient.Interfaces.Basic;
+using Tch.RestClient.Services.Extensions;
 
-namespace Tch.HttpClient.Services.Basic
+namespace Tch.RestClient.Services.Basic
 {
    /// <summary>
    ///    This class is implementation of <see cref="IHttpService{TRequest}" /> for 'single' mime-type http requests
@@ -27,7 +27,7 @@ namespace Tch.HttpClient.Services.Basic
 
       #endregion
 
-      protected override async Task<HttpResponseMessage> SendImpl(HttpMethod httpMethod, string url, SingleContentHttpRequest request, HttpClientOptions httpClientOptions)
+      protected override Task<HttpResponseMessage> SendImpl(HttpMethod httpMethod, string url, SingleContentHttpRequest request, HttpClientOptions httpClientOptions)
       {
          var httpRequestMessage = new HttpRequestMessage(httpMethod, url);
 
@@ -37,8 +37,7 @@ namespace Tch.HttpClient.Services.Basic
          }
 
          httpRequestMessage.AddHttpHeaders(request.HttpHeaders);
-         var httpResponseMessage = await _httpMessageService.Send(httpRequestMessage, httpClientOptions);
-         return httpResponseMessage;
+         return _httpMessageService.Send(httpRequestMessage, httpClientOptions);
       }
    }
 }

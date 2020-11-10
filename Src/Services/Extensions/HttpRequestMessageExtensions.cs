@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Net.Http;
 
-namespace Tch.HttpClient.Services.Helpers1
+namespace Tch.RestClient.Services.Extensions
 {
    internal static class HttpRequestMessageExtensions
    {

@@ -1,4 +1,4 @@
-﻿namespace Tch.HttpClient.Domain.Objects
+﻿namespace Tch.RestClient.Domain.Objects
 {
    public class OwnFile
    {

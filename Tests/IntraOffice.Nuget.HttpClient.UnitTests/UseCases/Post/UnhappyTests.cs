@@ -1,9 +1,8 @@
 ﻿using System.Net;
 using NUnit.Framework;
-using Tch.HttpClient.Domain.Exceptions;
-using Tch.HttpClient.Interfaces;
 using Tch.HttpClient.UnitTests.Fakes;
 using Tch.HttpClient.UnitTests.TestExtensions;
+using Tch.RestClient.Domain.Exceptions;
 
 namespace Tch.HttpClient.UnitTests.UseCases.Post
 {

@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace Tch.HttpClient.Interfaces.Helpers
+namespace Tch.RestClient.Interfaces.Helpers
 {
    internal interface IAdapterSync<TSource, TDestination>
    {
