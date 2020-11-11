@@ -8,26 +8,26 @@ using Tch.RestClient.Services.Extensions;
 namespace Tch.RestClient.Services.Basic
 {
    /// <summary>
-   ///    This class is implementation of <see cref="IHttpService{TRequest}" /> for 'multiple' mime-type http requests
+   ///    This class is implementation of <see cref="IHttpPayloadService{TRequest}" /> for 'multiple' mime-type http requests
    /// </summary>
-   internal class HttpService4MultiContentRequests : HttpServiceBase<MultiContentHttpRequest>
+   internal class HttpPayloadService4MultiContentPayload : HttpPayloadServiceBase<MultiContentPayload>
    {
-      private readonly IHttpMessageService _httpMessageService;
+      private readonly IHttpService _httpMessageService;
 
       #region ctor
 
-      public HttpService4MultiContentRequests() : this(new HttpMessageService())
+      public HttpPayloadService4MultiContentPayload() : this(new HttpMessageService())
       {
       }
 
-      internal HttpService4MultiContentRequests(IHttpMessageService httpMessageService)
+      internal HttpPayloadService4MultiContentPayload(IHttpService httpMessageService)
       {
          _httpMessageService = httpMessageService;
       }
 
       #endregion
 
-      protected override Task<HttpResponseMessage> SendImpl(HttpMethod httpMethod, string url, MultiContentHttpRequest request, RestClientOptions restClientOptions)
+      protected override Task<HttpResponseMessage> SendImpl(HttpMethod httpMethod, string url, MultiContentPayload request, RestClientOptions restClientOptions)
       {
          var multipartContent = new MultipartFormDataContent();
 

@@ -12,9 +12,9 @@ namespace Tch.RestClient.Services.Extensions
          return new StringContent(jsonText, Encoding.UTF8, "application/json");
       }
 
-      public static SingleContentHttpRequest ToSingleContentHttpRequest(this string jsonText, Dictionary<string, string> httpHeaders)
+      public static SingleContentPayload ToSingleContentHttpRequest(this string jsonText, Dictionary<string, string> httpHeaders)
       {
-         var httpRequest = new SingleContentHttpRequest();
+         var httpRequest = new SingleContentPayload();
 
          if (httpHeaders != null)
          {

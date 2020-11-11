@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Tch.RestClient.Domain.Exceptions;
@@ -8,7 +7,7 @@ using Tch.RestClient.Interfaces.Basic;
 
 namespace Tch.RestClient.Services.Basic
 {
-   internal class HttpMessageService : IHttpMessageService
+   internal class HttpMessageService : IHttpService
    {
       public async Task<HttpResponseMessage> Send(HttpRequestMessage httpRequestMessage, RestClientOptions restClientOptions)
       {
@@ -31,17 +30,6 @@ namespace Tch.RestClient.Services.Basic
                   ServiceUrl = requestUrl,
                   TimeoutSeconds = connectionTimeoutSeconds,
                   UsedHttpMethod = httpMethod
-               };
-            }
-
-            if (httpResponseMessage.StatusCode == HttpStatusCode.BadGateway || httpResponseMessage.StatusCode == HttpStatusCode.ServiceUnavailable)
-            {
-               throw new ExternalServiceOfflineException
-               {
-                  HttpMethod = httpMethod,
-                  ServiceUrl = requestUrl,
-                  ReasonPhrase = httpResponseMessage.ReasonPhrase,
-                  ResponseStatusCode = ((int) httpResponseMessage.StatusCode).ToString()
                };
             }
 

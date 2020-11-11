@@ -5,11 +5,10 @@ using Tch.RestClient.Domain.Objects;
 namespace Tch.RestClient.Interfaces.Basic
 {
    /// <summary>
-   ///    This interface represents http service that can send both single mime-type and multiple mime-type requests
+   ///    This interface represents low level service to make requests
    /// </summary>
-   /// <typeparam name="TRequest">Type of http request</typeparam>
-   internal interface IHttpService<TRequest>
+   internal interface IHttpService
    {
-      Task<HttpResponseMessage> Send(HttpMethod httpMethod, string url, TRequest request, RestClientOptions restClientOptions = null);
+      Task<HttpResponseMessage> Send(HttpRequestMessage httpRequestMessage, RestClientOptions restClientOptions);
    }
 }

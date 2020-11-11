@@ -10,16 +10,16 @@ namespace Tch.RestClient.Services.Basic
 {
    internal class RestClientInternal : IRestClientInternal
    {
-      private readonly IHttpService<SingleContentHttpRequest> _singleTypeHttpService;
-      private readonly IHttpService<MultiContentHttpRequest> _multiTypeHttpService;
+      private readonly IHttpPayloadService<SingleContentPayload> _singleTypeHttpService;
+      private readonly IHttpPayloadService<MultiContentPayload> _multiTypeHttpService;
 
       #region ctor
 
-      public RestClientInternal() : this(new HttpService4SingleContentRequests(), new HttpService4MultiContentRequests())
+      public RestClientInternal() : this(new HttpPayloadService4SingleContentPayload(), new HttpPayloadService4MultiContentPayload())
       {
       }
 
-      internal RestClientInternal(IHttpService<SingleContentHttpRequest> singleTypeHttpService, IHttpService<MultiContentHttpRequest> multiTypeHttpService)
+      internal RestClientInternal(IHttpPayloadService<SingleContentPayload> singleTypeHttpService, IHttpPayloadService<MultiContentPayload> multiTypeHttpService)
       {
          _singleTypeHttpService = singleTypeHttpService;
          _multiTypeHttpService = multiTypeHttpService;
@@ -57,7 +57,7 @@ namespace Tch.RestClient.Services.Basic
             list.Add(file.ToHttpContent());
          }
 
-         var request = new MultiContentHttpRequest {HttpHeaders = httpHeaders, HttpContents = list};
+         var request = new MultiContentPayload {HttpHeaders = httpHeaders, HttpContents = list};
          var response = await _multiTypeHttpService.Send(httpMethod, url, request, restClientOptions);
          var result = await response.ToResponseVm();
          return result;

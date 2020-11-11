@@ -3,12 +3,11 @@ using System.Net;
 using System.Threading.Tasks;
 using NUnit.Framework;
 using Tch.HttpClient.UnitTests.Fakes;
-using Tch.HttpClient.UnitTests.TestExtensions;
 using Tch.RestClient.Domain.Objects;
 
 namespace Tch.HttpClient.UnitTests.UseCases.Post
 {
-   public class HappyTests : OwnUnitTestBase<IHttpPostService<FakeResponse>>
+   public class HappyTests : UnitTestBase<IHttpPostService<FakeResponse>>
    {
       [Test]
       public async Task PostModel()

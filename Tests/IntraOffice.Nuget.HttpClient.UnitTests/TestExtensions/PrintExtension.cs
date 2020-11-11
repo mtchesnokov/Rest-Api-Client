@@ -1,13 +1,13 @@
-﻿using System.Diagnostics;
+﻿using System;
 using Newtonsoft.Json;
 
-namespace Tch.HttpClient.UnitTests.TestExtensions
+namespace Tch.RestClient.UnitTests.TestExtensions
 {
    public static class PrintExtension
    {
       public static void Print(this object obj)
       {
-         Debug.WriteLine(JsonConvert.SerializeObject(obj, Formatting.Indented));
+         Console.WriteLine($"\n{obj.GetType().Name}:\r" + JsonConvert.SerializeObject(obj, Formatting.Indented));
       }
    }
 }

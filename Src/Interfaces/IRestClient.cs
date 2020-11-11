@@ -28,7 +28,7 @@ namespace Tch.RestClient.Interfaces
 
       Task<ResponseDto> Post(string url, string jsonText, IEnumerable<OwnFile> files, Dictionary<string, string> httpHeaders);
       
-      Task<ResponseDto> Get(string url, Dictionary<string, string> httpHeaders);
+      Task<ResponseDto> Get(string url, Dictionary<string, string> httpHeaders = null);
 
       Task<OwnFile> GetFile(string url, Dictionary<string, string> httpHeaders = null);
    }

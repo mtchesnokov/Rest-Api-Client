@@ -4,22 +4,21 @@ using System.Net.Http;
 namespace Tch.RestClient.Domain.Helpers
 {
    /// <summary>
-   ///    This is handy help class which represents multiple mime-types http request
+   ///    This is handy help class which represents single mime-type http request
    /// </summary>
-   internal class MultiContentHttpRequest
+   internal class SingleContentPayload
    {
       #region ctor
 
-      public MultiContentHttpRequest()
+      public SingleContentPayload()
       {
          HttpHeaders = new Dictionary<string, string>();
-         HttpContents = new HttpContent[0];
       }
 
       #endregion
 
       public Dictionary<string, string> HttpHeaders { get; set; }
 
-      public IEnumerable<HttpContent> HttpContents { get; set; }
+      public HttpContent HttpContent { get; set; }
    }
 }

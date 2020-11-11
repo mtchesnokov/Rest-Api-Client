@@ -1,4 +1,4 @@
-﻿namespace Tch.HttpClient.UnitTests.Fakes
+﻿namespace Tch.RestClient.UnitTests.Fakes
 {
    public class FakeResponse
    {

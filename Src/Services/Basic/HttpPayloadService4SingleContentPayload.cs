@@ -8,26 +8,26 @@ using Tch.RestClient.Services.Extensions;
 namespace Tch.RestClient.Services.Basic
 {
    /// <summary>
-   ///    This class is implementation of <see cref="IHttpService{TRequest}" /> for 'single' mime-type http requests
+   ///    This class is implementation of <see cref="IHttpPayloadService{TRequest}" /> for 'single' mime-type http requests
    /// </summary>
-   internal class HttpService4SingleContentRequests : HttpServiceBase<SingleContentHttpRequest>
+   internal class HttpPayloadService4SingleContentPayload : HttpPayloadServiceBase<SingleContentPayload>
    {
-      private readonly IHttpMessageService _httpMessageService;
+      private readonly IHttpService _httpMessageService;
 
       #region ctor
 
-      public HttpService4SingleContentRequests() : this(new HttpMessageService())
+      public HttpPayloadService4SingleContentPayload() : this(new HttpMessageService())
       {
       }
 
-      internal HttpService4SingleContentRequests(IHttpMessageService httpMessageService)
+      internal HttpPayloadService4SingleContentPayload(IHttpService httpMessageService)
       {
          _httpMessageService = httpMessageService;
       }
 
       #endregion
 
-      protected override Task<HttpResponseMessage> SendImpl(HttpMethod httpMethod, string url, SingleContentHttpRequest request, RestClientOptions restClientOptions)
+      protected override Task<HttpResponseMessage> SendImpl(HttpMethod httpMethod, string url, SingleContentPayload request, RestClientOptions restClientOptions)
       {
          var httpRequestMessage = new HttpRequestMessage(httpMethod, url);
 

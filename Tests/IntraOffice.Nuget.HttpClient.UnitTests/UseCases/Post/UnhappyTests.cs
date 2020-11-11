@@ -1,23 +1,24 @@
 ﻿using System.Net;
+using System.Net.Http;
 using NUnit.Framework;
-using Tch.HttpClient.UnitTests.Fakes;
-using Tch.HttpClient.UnitTests.TestExtensions;
 using Tch.RestClient.Domain.Exceptions;
+using Tch.RestClient.Interfaces;
+using Tch.RestClient.UnitTests.TestExtensions;
 
-namespace Tch.HttpClient.UnitTests.UseCases.Post
+namespace Tch.RestClient.UnitTests.UseCases.Post
 {
-   public class UnhappyTests : OwnUnitTestBase<IHttpPostService<FakeResponse>>
+   public class UnhappyTests : UnitTestBase<IRestClient>
    {
       [Test]
       public void Server_Offline()
       {
          //arrange
          var url = "http://someurl";
-         var model = new FakeModel();
-         SetupResponse(HttpStatusCode.ServiceUnavailable, string.Empty);
+         var httpResponseMessage = new HttpResponseMessage(HttpStatusCode.ServiceUnavailable);
+         this.SetupResponse(httpResponseMessage);
 
          //assert
-         var exception = Assert.ThrowsAsync<ExternalServiceHttpException>(() => SUT().PostModel(url, model));
+         var exception = Assert.ThrowsAsync<ExternalServiceOfflineException>(() => SUT().Get(url));
 
          //print
          exception.Print();

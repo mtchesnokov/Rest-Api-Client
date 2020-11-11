@@ -1,3 +1,3 @@
 ﻿using System.Runtime.CompilerServices;
 
-[assembly:InternalsVisibleTo("IntraOffice.Nuget.RestClient.UnitTests")]
+[assembly:InternalsVisibleTo("Tch.RestClient.UnitTests")]

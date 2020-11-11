@@ -1,12 +1,13 @@
 ﻿using System.Diagnostics;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Tch.HttpClient.UnitTests.TestExtensions;
 using Tch.RestClient.Domain.Objects;
+using Tch.RestClient.Interfaces.Basic;
+using Tch.RestClient.UnitTests.TestExtensions;
 
-namespace Tch.HttpClient.UnitTests.Fakes
+namespace Tch.RestClient.UnitTests.Fakes
 {
-   public class FakeHttpMessageService : IHttpMessageService
+   public class FakeHttpService : IHttpService
    {
       public HttpResponseMessage HttpResponseMessage { get; set; }
 
