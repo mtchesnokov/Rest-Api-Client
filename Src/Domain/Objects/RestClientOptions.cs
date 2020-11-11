@@ -2,7 +2,7 @@
 
 namespace Tch.RestClient.Domain.Objects
 {
-   public class HttpClientOptions
+   public class RestClientOptions
    {
       /// <summary>
       ///    This is timeout we will wait till external service responds
@@ -11,7 +11,7 @@ namespace Tch.RestClient.Domain.Objects
 
       #region ctor
 
-      public HttpClientOptions(int connectionTimeoutSeconds = 80)
+      public RestClientOptions(int connectionTimeoutSeconds = 80)
       {
          if (connectionTimeoutSeconds <= 0)
          {

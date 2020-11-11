@@ -18,7 +18,7 @@ namespace Tch.HttpClient.UnitTests.UseCases.Post
          var model = new FakeModel {Id = "abc", Name = "efg"};
          SetupResponse(HttpStatusCode.OK, new FakeResponse {Message = "Hello"});
          var httpHeaders = new Dictionary<string, string> {{"X-Tenant", "Dummy"}};
-         var httpClientOptions = new HttpClientOptions(123);
+         var httpClientOptions = new RestClientOptions(123);
 
          //act        
          var response = await SUT().PostModel(url, model, httpHeaders, httpClientOptions);

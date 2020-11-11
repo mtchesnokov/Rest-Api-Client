@@ -10,13 +10,13 @@ namespace Tch.HttpClient.UnitTests.Fakes
    {
       public HttpResponseMessage HttpResponseMessage { get; set; }
 
-      public Task<HttpResponseMessage> Send(HttpRequestMessage requestMessage, HttpClientOptions httpClientOptions)
+      public Task<HttpResponseMessage> Send(HttpRequestMessage requestMessage, RestClientOptions restClientOptions)
       {
          Debug.WriteLine("HttpRequest:");
          requestMessage.Print();
 
          Debug.WriteLine("HttpClientOptions:");
-         httpClientOptions.Print();
+         restClientOptions.Print();
 
          return Task.FromResult(HttpResponseMessage);
       }

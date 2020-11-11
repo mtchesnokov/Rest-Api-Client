@@ -9,6 +9,6 @@ namespace Tch.RestClient.Interfaces.Basic
    /// </summary>
    internal interface IHttpMessageService
    {
-      Task<HttpResponseMessage> Send(HttpRequestMessage httpRequestMessage, HttpClientOptions httpClientOptions);
+      Task<HttpResponseMessage> Send(HttpRequestMessage httpRequestMessage, RestClientOptions restClientOptions);
    }
 }

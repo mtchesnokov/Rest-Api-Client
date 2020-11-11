@@ -7,16 +7,16 @@ namespace Tch.RestClient.Services.Basic
 {
    internal abstract class HttpServiceBase<TRequest> : IHttpService<TRequest>
    {
-      public Task<HttpResponseMessage> Send(HttpMethod httpMethod, string url, TRequest request, HttpClientOptions httpClientOptions)
+      public Task<HttpResponseMessage> Send(HttpMethod httpMethod, string url, TRequest request, RestClientOptions restClientOptions)
       {
-         if (httpClientOptions == null)
+         if (restClientOptions == null)
          {
-            httpClientOptions = new HttpClientOptions();
+            restClientOptions = new RestClientOptions();
          }
 
-         return SendImpl(httpMethod, url, request, httpClientOptions);
+         return SendImpl(httpMethod, url, request, restClientOptions);
       }
 
-      protected abstract Task<HttpResponseMessage> SendImpl(HttpMethod httpMethod, string url, TRequest request, HttpClientOptions httpClientOptions);
+      protected abstract Task<HttpResponseMessage> SendImpl(HttpMethod httpMethod, string url, TRequest request, RestClientOptions restClientOptions);
    }
 }

@@ -10,13 +10,13 @@ namespace Tch.RestClient.Services.Basic
 {
    internal class HttpMessageService : IHttpMessageService
    {
-      public async Task<HttpResponseMessage> Send(HttpRequestMessage httpRequestMessage, HttpClientOptions httpClientOptions)
+      public async Task<HttpResponseMessage> Send(HttpRequestMessage httpRequestMessage, RestClientOptions restClientOptions)
       {
          var httpMethod = httpRequestMessage.Method.ToString();
          var requestUrl = httpRequestMessage.RequestUri.ToString();
-         var connectionTimeoutSeconds = httpClientOptions.ConnectionTimeoutSeconds;
+         var connectionTimeoutSeconds = restClientOptions.ConnectionTimeoutSeconds;
 
-         using (var client = new System.Net.Http.HttpClient {Timeout = TimeSpan.FromSeconds(connectionTimeoutSeconds)})
+         using (var client = new HttpClient {Timeout = TimeSpan.FromSeconds(connectionTimeoutSeconds)})
          {
             HttpResponseMessage httpResponseMessage;
 

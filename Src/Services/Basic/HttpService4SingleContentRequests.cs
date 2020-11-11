@@ -27,7 +27,7 @@ namespace Tch.RestClient.Services.Basic
 
       #endregion
 
-      protected override Task<HttpResponseMessage> SendImpl(HttpMethod httpMethod, string url, SingleContentHttpRequest request, HttpClientOptions httpClientOptions)
+      protected override Task<HttpResponseMessage> SendImpl(HttpMethod httpMethod, string url, SingleContentHttpRequest request, RestClientOptions restClientOptions)
       {
          var httpRequestMessage = new HttpRequestMessage(httpMethod, url);
 
@@ -37,7 +37,7 @@ namespace Tch.RestClient.Services.Basic
          }
 
          httpRequestMessage.AddHttpHeaders(request.HttpHeaders);
-         return _httpMessageService.Send(httpRequestMessage, httpClientOptions);
+         return _httpMessageService.Send(httpRequestMessage, restClientOptions);
       }
    }
 }

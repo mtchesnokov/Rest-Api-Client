@@ -27,7 +27,7 @@ namespace Tch.RestClient.Services.Basic
 
       #endregion
 
-      protected override Task<HttpResponseMessage> SendImpl(HttpMethod httpMethod, string url, MultiContentHttpRequest request, HttpClientOptions httpClientOptions)
+      protected override Task<HttpResponseMessage> SendImpl(HttpMethod httpMethod, string url, MultiContentHttpRequest request, RestClientOptions restClientOptions)
       {
          var multipartContent = new MultipartFormDataContent();
 
@@ -39,7 +39,7 @@ namespace Tch.RestClient.Services.Basic
          var httpRequestMessage = new HttpRequestMessage(httpMethod, url);
          httpRequestMessage.Content = multipartContent;
          httpRequestMessage.AddHttpHeaders(request.HttpHeaders);
-         return _httpMessageService.Send(httpRequestMessage, httpClientOptions);
+         return _httpMessageService.Send(httpRequestMessage, restClientOptions);
       }
    }
 }
