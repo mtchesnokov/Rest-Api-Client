@@ -5,7 +5,7 @@ using Tch.RestClient.Domain.Exceptions;
 using Tch.RestClient.Interfaces;
 using Tch.RestClient.UnitTests.TestExtensions;
 
-namespace Tch.RestClient.UnitTests.UseCases.Post
+namespace Tch.RestClient.UnitTests.UseCases.Get
 {
    public class UnhappyTests : UnitTestBase<IRestClient>
    {

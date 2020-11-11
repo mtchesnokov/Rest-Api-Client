@@ -3,9 +3,6 @@
     <TargetFramework>net472</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Remove="UseCases\Post\HappyTests.cs" />
-  </ItemGroup>
-  <ItemGroup>
     <None Remove="app.config" />
   </ItemGroup>
   <ItemGroup>
