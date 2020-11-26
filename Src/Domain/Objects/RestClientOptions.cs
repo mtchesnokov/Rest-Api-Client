@@ -5,7 +5,8 @@ namespace Tch.RestClient.Domain.Objects
    public class RestClientOptions
    {
       /// <summary>
-      ///    This is timeout we will wait till external service responds
+      ///    This is timeout we will wait till external service responds.
+      ///    This defaults to 80 seconds
       /// </summary>
       public int ConnectionTimeoutSeconds { get; }
 

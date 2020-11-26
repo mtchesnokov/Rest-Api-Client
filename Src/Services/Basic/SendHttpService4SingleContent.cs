@@ -8,19 +8,19 @@ using Tch.RestClient.Services.Extensions;
 namespace Tch.RestClient.Services.Basic
 {
    /// <summary>
-   ///    This class is implementation of <see cref="IHttpPayloadService{TRequest}" /> for 'single' mime-type http requests
+   ///    This class is implementation of <see cref="ISendHttpService{TPayload}" /> for 'single' mime-type http requests
    /// </summary>
-   internal class HttpPayloadService4SingleContentPayload : HttpPayloadServiceBase<SingleContentPayload>
+   internal class SendHttpService4SingleContent : SendHttpServiceBase<SingleContentPayload>
    {
-      private readonly IHttpService _httpMessageService;
+      private readonly IHttpSender _httpMessageService;
 
       #region ctor
 
-      public HttpPayloadService4SingleContentPayload() : this(new HttpMessageService())
+      public SendHttpService4SingleContent() : this(new HttpSender())
       {
       }
 
-      internal HttpPayloadService4SingleContentPayload(IHttpService httpMessageService)
+      internal SendHttpService4SingleContent(IHttpSender httpMessageService)
       {
          _httpMessageService = httpMessageService;
       }

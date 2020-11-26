@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using Tch.RestClient.Domain.Exceptions;
 
-namespace Tch.HttpClient.IntTests.UseCases.Automatic.Post
+namespace Tch.RestClient.IntTests.UseCases.Automatic.Post
 {
    [Category("EndToEnd")]
    [Explicit]
@@ -16,7 +16,7 @@ namespace Tch.HttpClient.IntTests.UseCases.Automatic.Post
          var model = new FakeCreateModel {Name = "Dummy"};
 
          //act+assert
-         var exception = Assert.ThrowsAsync<ExternalServiceHttpException>(() => SUT().PostModel(url, model));
+         var exception = Assert.ThrowsAsync<ExternalServiceErrorException>(() => SUT().PostModel(url, model));
 
          //print
          exception.Print();

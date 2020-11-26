@@ -2,7 +2,7 @@
 
 namespace Tch.RestClient.Domain.Objects
 {
-   public class ResponseDto
+   public class ResponseVm
    {
       public HttpStatusCode StatusCode { get; set; }
 

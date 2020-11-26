@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -12,16 +13,16 @@ namespace Tch.RestClient.Services
 {
    public class RestClient : IRestClient
    {
-      private readonly IRestClientInternal _innerService;
+      private readonly IHttpService _innerService;
       private readonly RestClientOptions _options;
 
       #region ctor
 
-      public RestClient(RestClientOptions options = null) : this(new RestClientInternal(), options)
+      public RestClient(RestClientOptions options = null) : this(new HttpService(), options)
       {
       }
 
-      internal RestClient(IRestClientInternal innerService, RestClientOptions options)
+      internal RestClient(IHttpService innerService, RestClientOptions options)
       {
          _options = options;
          _innerService = innerService;
@@ -29,73 +30,173 @@ namespace Tch.RestClient.Services
 
       #endregion
 
-      public Task<ResponseDto> Put(string url, Dictionary<string, string> httpHeaders)
+      public Task<ResponseVm> Put(string url, Dictionary<string, string> httpHeaders)
       {
+         if (string.IsNullOrEmpty(url))
+         {
+            throw new ArgumentNullException(nameof(url));
+         }
+
          return _innerService.Send(HttpMethod.Put, url, httpHeaders, _options);
       }
 
-      public Task<ResponseDto> Put(string url, string jsonText, Dictionary<string, string> httpHeaders)
+      public Task<ResponseVm> Put(string url, string jsonText, Dictionary<string, string> httpHeaders)
       {
+         if (string.IsNullOrEmpty(url))
+         {
+            throw new ArgumentNullException(nameof(url));
+         }
+
+         if (string.IsNullOrEmpty(jsonText))
+         {
+            throw new ArgumentNullException(nameof(url));
+         }
+
          return _innerService.Send(HttpMethod.Put, url, jsonText, httpHeaders, _options);
       }
 
-      public Task<ResponseDto> Put(string url, string jsonText, IEnumerable<OwnFile> files, Dictionary<string, string> httpHeaders)
+      public Task<ResponseVm> Put(string url, string jsonText, IEnumerable<OwnFile> files, Dictionary<string, string> httpHeaders)
       {
+         if (string.IsNullOrEmpty(url))
+         {
+            throw new ArgumentNullException(nameof(url));
+         }
+
+         if (string.IsNullOrEmpty(jsonText))
+         {
+            throw new ArgumentNullException(nameof(url));
+         }
+
          return _innerService.Send(HttpMethod.Put, url, jsonText, files, httpHeaders, _options);
       }
 
-      public Task<ResponseDto> Patch(string url, string jsonText, IEnumerable<OwnFile> files, Dictionary<string, string> httpHeaders)
+      public Task<ResponseVm> Patch(string url, string jsonText, IEnumerable<OwnFile> files, Dictionary<string, string> httpHeaders)
       {
+         if (string.IsNullOrEmpty(url))
+         {
+            throw new ArgumentNullException(nameof(url));
+         }
+
+         if (string.IsNullOrEmpty(jsonText))
+         {
+            throw new ArgumentNullException(nameof(url));
+         }
+
          return _innerService.Send(new HttpMethod("PATCH"), url, jsonText, files, httpHeaders, _options);
       }
 
-      public Task<ResponseDto> Patch(string url, Dictionary<string, string> httpHeaders)
+      public Task<ResponseVm> Patch(string url, Dictionary<string, string> httpHeaders)
       {
+         if (string.IsNullOrEmpty(url))
+         {
+            throw new ArgumentNullException(nameof(url));
+         }
+
          return _innerService.Send(new HttpMethod("PATCH"), url, httpHeaders, _options);
       }
 
-      public Task<ResponseDto> Patch(string url, string jsonText, Dictionary<string, string> httpHeaders)
+      public Task<ResponseVm> Patch(string url, string jsonText, Dictionary<string, string> httpHeaders)
       {
+         if (string.IsNullOrEmpty(url))
+         {
+            throw new ArgumentNullException(nameof(url));
+         }
+
+         if (string.IsNullOrEmpty(jsonText))
+         {
+            throw new ArgumentNullException(nameof(url));
+         }
+
          return _innerService.Send(new HttpMethod("PATCH"), url, jsonText, httpHeaders, _options);
       }
 
-      public Task<ResponseDto> Delete(string url, Dictionary<string, string> httpHeaders)
+      public Task<ResponseVm> Delete(string url, Dictionary<string, string> httpHeaders)
       {
+         if (string.IsNullOrEmpty(url))
+         {
+            throw new ArgumentNullException(nameof(url));
+         }
+
          return _innerService.Send(HttpMethod.Delete, url, httpHeaders, _options);
       }
 
-      public Task<ResponseDto> Delete(string url, string jsonText, Dictionary<string, string> httpHeaders)
+      public Task<ResponseVm> Delete(string url, string jsonText, Dictionary<string, string> httpHeaders)
       {
+         if (string.IsNullOrEmpty(url))
+         {
+            throw new ArgumentNullException(nameof(url));
+         }
+
+         if (string.IsNullOrEmpty(jsonText))
+         {
+            throw new ArgumentNullException(nameof(url));
+         }
+
          return _innerService.Send(HttpMethod.Put, url, jsonText, httpHeaders, _options);
       }
 
-      public Task<ResponseDto> Post(string url, Dictionary<string, string> httpHeaders)
+      public Task<ResponseVm> Post(string url, Dictionary<string, string> httpHeaders)
       {
+         if (string.IsNullOrEmpty(url))
+         {
+            throw new ArgumentNullException(nameof(url));
+         }
+
          return _innerService.Send(HttpMethod.Post, url, httpHeaders, _options);
       }
 
-      public Task<ResponseDto> Post(string url, string jsonText, Dictionary<string, string> httpHeaders)
+      public Task<ResponseVm> Post(string url, string jsonText, Dictionary<string, string> httpHeaders)
       {
+         if (string.IsNullOrEmpty(url))
+         {
+            throw new ArgumentNullException(nameof(url));
+         }
+
+         if (string.IsNullOrEmpty(jsonText))
+         {
+            throw new ArgumentNullException(nameof(url));
+         }
+
          return _innerService.Send(HttpMethod.Post, url, jsonText, httpHeaders, _options);
       }
 
-      public Task<ResponseDto> Post(string url, string jsonText, IEnumerable<OwnFile> files, Dictionary<string, string> httpHeaders)
+      public Task<ResponseVm> Post(string url, string jsonText, IEnumerable<OwnFile> files, Dictionary<string, string> httpHeaders)
       {
+         if (string.IsNullOrEmpty(url))
+         {
+            throw new ArgumentNullException(nameof(url));
+         }
+
+         if (string.IsNullOrEmpty(jsonText))
+         {
+            throw new ArgumentNullException(nameof(url));
+         }
+
          return _innerService.Send(HttpMethod.Post, url, jsonText, files, httpHeaders, _options);
       }
 
-      public Task<ResponseDto> Get(string url, Dictionary<string, string> httpHeaders)
+      public Task<ResponseVm> Get(string url, Dictionary<string, string> httpHeaders)
       {
+         if (string.IsNullOrEmpty(url))
+         {
+            throw new ArgumentNullException(nameof(url));
+         }
+
          return _innerService.Send(HttpMethod.Get, url, httpHeaders, _options);
       }
 
       public async Task<OwnFile> GetFile(string url, Dictionary<string, string> httpHeaders = null)
       {
+         if (string.IsNullOrEmpty(url))
+         {
+            throw new ArgumentNullException(nameof(url));
+         }
+
          var httpResponseMessage = await _innerService.SendRaw(HttpMethod.Get, url, null, httpHeaders, _options);
 
          if (!httpResponseMessage.IsSuccessStatusCode)
          {
-            throw new ExternalServiceHttpException
+            throw new ExternalServiceErrorException
             {
                ReturnedStatusCode = httpResponseMessage.StatusCode.ToString(),
                ReasonPhrase = httpResponseMessage.ReasonPhrase,

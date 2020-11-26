@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using NUnit.Framework;
 
-namespace Tch.HttpClient.IntTests.UseCases.Automatic.Post
+namespace Tch.RestClient.IntTests.UseCases.Automatic.Post
 {
    [Category("EndToEnd")]
    [Explicit]

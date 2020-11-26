@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tch.RestClient", "Src\Tch.R
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tch.RestClient.UnitTests", "Tests\intraOffice.Nuget.HttpClient.UnitTests\Tch.RestClient.UnitTests.csproj", "{ADA429CE-8B8B-4302-8D57-4C9D22735E9B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tch.HttpClient.IntTests", "Tests\IntraOffice.Nuget.HttpClient.IntTests\Tch.HttpClient.IntTests.csproj", "{0C3AF4D7-EE4F-40CE-BA81-0ABF227494DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tch.RestClient.IntTests", "Tests\IntraOffice.Nuget.HttpClient.IntTests\Tch.RestClient.IntTests.csproj", "{0C3AF4D7-EE4F-40CE-BA81-0ABF227494DB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F1B493B4-D0F6-43D5-B5B3-9DB147CDCBB8}"
 	ProjectSection(SolutionItems) = preProject

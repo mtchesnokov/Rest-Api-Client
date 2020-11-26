@@ -1,4 +1,4 @@
-﻿namespace Tch.HttpClient.IntTests.Fakes
+﻿namespace Tch.RestClient.IntTests.Fakes
 {
    public class FakeModel
    {

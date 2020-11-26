@@ -6,7 +6,7 @@ using Tch.RestClient.UnitTests.TestExtensions;
 
 namespace Tch.RestClient.UnitTests.Fakes
 {
-   public class FakeHttpService : IHttpService
+   public class FakeHttpService : IHttpSender
    {
       public HttpResponseMessage HttpResponseMessage { get; set; }
 

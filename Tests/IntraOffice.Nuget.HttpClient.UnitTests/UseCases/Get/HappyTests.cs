@@ -1,8 +1,6 @@
-﻿using System.Net;
-using System.Net.Http;
-using System.Text;
+﻿using System.Collections.Generic;
+using System.Net;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
 using NUnit.Framework;
 using Tch.RestClient.Interfaces;
 using Tch.RestClient.UnitTests.TestExtensions;
@@ -12,18 +10,18 @@ namespace Tch.RestClient.UnitTests.UseCases.Get
    public class HappyTests : UnitTestBase<IRestClient>
    {
       [Test]
-      public async Task No_Http_Headers()
+      public async Task Happy_Case()
       {
          //arrange
+         this.SetupResponse(HttpStatusCode.OK, "OK", new {Message = "Hello world"});
          var url = "http://someurl";
-         
-         var httpResponseMessage = new HttpResponseMessage(HttpStatusCode.OK);
-         var obj = new {Message = "Hello world"};
-         httpResponseMessage.Content = new StringContent(JsonConvert.SerializeObject(obj), Encoding.UTF8, "application/json");
-         this.SetupResponse(httpResponseMessage);
+         var httpHeaders = new Dictionary<string, string>
+         {
+            {"Authorization", "Bearer XXX"}
+         };
 
          //assert
-         var responseDto = await SUT().Get(url);
+         var responseDto = await SUT().Get(url, httpHeaders);
 
          //print
          responseDto.Print();

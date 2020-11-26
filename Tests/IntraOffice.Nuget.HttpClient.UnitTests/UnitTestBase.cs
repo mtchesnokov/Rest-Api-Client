@@ -2,7 +2,7 @@
 using NUnit.Framework;
 using StructureMap;
 
-namespace Tch.RestClient.UnitTests.UseCases
+namespace Tch.RestClient.UnitTests
 {
    [TestFixture]
    public abstract class UnitTestBase

@@ -1,4 +1,4 @@
-﻿namespace Tch.HttpClient.IntTests.UseCases.Automatic.Post
+﻿namespace Tch.RestClient.IntTests.UseCases.Automatic.Post
 {
    public class FakeCreatedModel
    {

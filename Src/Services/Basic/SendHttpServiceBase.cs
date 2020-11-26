@@ -7,7 +7,7 @@ using Tch.RestClient.Interfaces.Basic;
 
 namespace Tch.RestClient.Services.Basic
 {
-   internal abstract class HttpPayloadServiceBase<TPayload> : IHttpPayloadService<TPayload>
+   internal abstract class SendHttpServiceBase<TPayload> : ISendHttpService<TPayload>
    {
       public async Task<HttpResponseMessage> Send(HttpMethod httpMethod, string url, TPayload payload, RestClientOptions restClientOptions)
       {

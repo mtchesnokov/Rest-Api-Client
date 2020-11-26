@@ -1,4 +1,4 @@
-namespace Tch.HttpClient.IntTests.TestExtensions
+namespace Tch.RestClient.IntTests.TestExtensions
 {
    internal static class GetUrlExtension
    {
