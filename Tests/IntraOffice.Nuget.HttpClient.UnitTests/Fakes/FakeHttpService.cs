@@ -1,7 +1,7 @@
 ﻿using System.Net.Http;
 using System.Threading.Tasks;
 using Tch.RestClient.Domain.Objects;
-using Tch.RestClient.Interfaces.Basic;
+using Tch.RestClient.Interfaces.Helpers;
 using Tch.RestClient.UnitTests.TestExtensions;
 
 namespace Tch.RestClient.UnitTests.Fakes

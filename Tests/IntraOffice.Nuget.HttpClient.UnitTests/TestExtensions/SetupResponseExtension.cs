@@ -2,7 +2,7 @@
 using System.Net.Http;
 using System.Text;
 using Newtonsoft.Json;
-using Tch.RestClient.Interfaces.Basic;
+using Tch.RestClient.Interfaces.Helpers;
 using Tch.RestClient.UnitTests.Fakes;
 
 namespace Tch.RestClient.UnitTests.TestExtensions

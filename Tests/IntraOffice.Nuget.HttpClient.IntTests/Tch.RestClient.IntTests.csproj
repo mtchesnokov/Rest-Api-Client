@@ -3,15 +3,27 @@
     <TargetFramework>net472</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Remove="UseCases\Automatic\HttpDeleteService\**" />
-    <Compile Remove="UseCases\Automatic\HttpGetService\**" />
-    <Compile Remove="UseCases\Manual\HttpGetService\**" />
-    <EmbeddedResource Remove="UseCases\Automatic\HttpDeleteService\**" />
-    <EmbeddedResource Remove="UseCases\Automatic\HttpGetService\**" />
-    <EmbeddedResource Remove="UseCases\Manual\HttpGetService\**" />
-    <None Remove="UseCases\Automatic\HttpDeleteService\**" />
-    <None Remove="UseCases\Automatic\HttpGetService\**" />
-    <None Remove="UseCases\Manual\HttpGetService\**" />
+    <Compile Remove="UseCases\Delete\**" />
+    <Compile Remove="UseCases\Get\Test12Controller\**" />
+    <Compile Remove="UseCases\Get\Test13Controller\**" />
+    <Compile Remove="UseCases\Get\Test14Controller\**" />
+    <Compile Remove="UseCases\Get\Test1Controller\**" />
+    <Compile Remove="UseCases\Post\**" />
+    <Compile Remove="UseCases\Put\**" />
+    <EmbeddedResource Remove="UseCases\Delete\**" />
+    <EmbeddedResource Remove="UseCases\Get\Test12Controller\**" />
+    <EmbeddedResource Remove="UseCases\Get\Test13Controller\**" />
+    <EmbeddedResource Remove="UseCases\Get\Test14Controller\**" />
+    <EmbeddedResource Remove="UseCases\Get\Test1Controller\**" />
+    <EmbeddedResource Remove="UseCases\Post\**" />
+    <EmbeddedResource Remove="UseCases\Put\**" />
+    <None Remove="UseCases\Delete\**" />
+    <None Remove="UseCases\Get\Test12Controller\**" />
+    <None Remove="UseCases\Get\Test13Controller\**" />
+    <None Remove="UseCases\Get\Test14Controller\**" />
+    <None Remove="UseCases\Get\Test1Controller\**" />
+    <None Remove="UseCases\Post\**" />
+    <None Remove="UseCases\Put\**" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
@@ -20,13 +32,14 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="StructureMap" Version="4.7.1" />
     <PackageReference Include="System.Net.Http" Version="4.3.4" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Src\Tch.RestClient.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="UseCases\Manual\" />
+    <Reference Include="System.Configuration" />
   </ItemGroup>
 
 

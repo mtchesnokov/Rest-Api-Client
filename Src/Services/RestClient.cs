@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using Tch.RestClient.Domain.Exceptions;
 using Tch.RestClient.Domain.Objects;
 using Tch.RestClient.Interfaces;
-using Tch.RestClient.Interfaces.Basic;
-using Tch.RestClient.Services.Basic;
+using Tch.RestClient.Interfaces.Helpers;
 using Tch.RestClient.Services.Extensions;
+using Tch.RestClient.Services.Helpers;
 
 namespace Tch.RestClient.Services
 {
