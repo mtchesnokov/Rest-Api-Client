@@ -19,11 +19,11 @@ namespace Tch.RestClient.Services.Extensions
          };
       }
 
-      public static async Task<OwnFile> ReadFile(this HttpResponseMessage httpResponseMessage)
+      public static async Task<FileVm> ReadFile(this HttpResponseMessage httpResponseMessage)
       {
          var content = await httpResponseMessage.Content.ReadAsByteArrayAsync();
 
-         return new OwnFile
+         return new FileVm
          {
             Content = content,
             FileName = GetFileName(httpResponseMessage.Content),

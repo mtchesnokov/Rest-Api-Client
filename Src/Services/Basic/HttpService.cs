@@ -47,7 +47,7 @@ namespace Tch.RestClient.Services.Basic
          return responseVm;
       }
 
-      public async Task<ResponseVm> Send(HttpMethod httpMethod, string url, string jsonText, IEnumerable<OwnFile> files, Dictionary<string, string> httpHeaders, RestClientOptions options)
+      public async Task<ResponseVm> Send(HttpMethod httpMethod, string url, string jsonText, IEnumerable<FileVm> files, Dictionary<string, string> httpHeaders, RestClientOptions options)
       {
          var jsonContent = jsonText.ToHttpContent();
 

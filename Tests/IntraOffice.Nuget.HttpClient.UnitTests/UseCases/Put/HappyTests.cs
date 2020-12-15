@@ -57,7 +57,7 @@ namespace Tch.RestClient.UnitTests.UseCases.Put
          //arrange
          var url = "http://someurl";
          var jsonText = JsonConvert.SerializeObject(new {Message = "Hello"});
-         OwnFile[] files = {this.GetEmbeddedFile("Welcome.pdf")};
+         FileVm[] files = {this.GetEmbeddedFile("Welcome.pdf")};
          var httpHeaders = new Dictionary<string, string>
          {
             {"Authorization", "Bearer XXX"}

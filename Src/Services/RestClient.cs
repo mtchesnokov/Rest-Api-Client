@@ -55,7 +55,7 @@ namespace Tch.RestClient.Services
          return _innerService.Send(HttpMethod.Put, url, jsonText, httpHeaders, _options);
       }
 
-      public Task<ResponseVm> Put(string url, string jsonText, IEnumerable<OwnFile> files, Dictionary<string, string> httpHeaders)
+      public Task<ResponseVm> Put(string url, string jsonText, IEnumerable<FileVm> files, Dictionary<string, string> httpHeaders)
       {
          if (string.IsNullOrEmpty(url))
          {
@@ -70,7 +70,7 @@ namespace Tch.RestClient.Services
          return _innerService.Send(HttpMethod.Put, url, jsonText, files, httpHeaders, _options);
       }
 
-      public Task<ResponseVm> Patch(string url, string jsonText, IEnumerable<OwnFile> files, Dictionary<string, string> httpHeaders)
+      public Task<ResponseVm> Patch(string url, string jsonText, IEnumerable<FileVm> files, Dictionary<string, string> httpHeaders)
       {
          if (string.IsNullOrEmpty(url))
          {
@@ -160,7 +160,7 @@ namespace Tch.RestClient.Services
          return _innerService.Send(HttpMethod.Post, url, jsonText, httpHeaders, _options);
       }
 
-      public Task<ResponseVm> Post(string url, string jsonText, IEnumerable<OwnFile> files, Dictionary<string, string> httpHeaders)
+      public Task<ResponseVm> Post(string url, string jsonText, IEnumerable<FileVm> files, Dictionary<string, string> httpHeaders)
       {
          if (string.IsNullOrEmpty(url))
          {
@@ -185,7 +185,7 @@ namespace Tch.RestClient.Services
          return _innerService.Send(HttpMethod.Get, url, httpHeaders, _options);
       }
 
-      public async Task<OwnFile> GetFile(string url, Dictionary<string, string> httpHeaders = null)
+      public async Task<FileVm> GetFile(string url, Dictionary<string, string> httpHeaders = null)
       {
          if (string.IsNullOrEmpty(url))
          {

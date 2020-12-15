@@ -25,7 +25,7 @@ namespace Tch.RestClient.Interfaces
       /// <param name="url">Service url</param>
       /// <param name="httpHeaders">Optional dictionary with http headers</param>
       /// <returns>File returned in http response</returns>
-      Task<OwnFile> GetFile(string url, Dictionary<string, string> httpHeaders = null);
+      Task<FileVm> GetFile(string url, Dictionary<string, string> httpHeaders = null);
 
       /// <summary>
       /// Send 'PUT' request
@@ -52,7 +52,7 @@ namespace Tch.RestClient.Interfaces
       /// <param name="files">One of more files that will be sent along embedded in http request</param>
       /// <param name="httpHeaders">Optional dictionary with http headers</param>
       /// <returns>View model of http response</returns>
-      Task<ResponseVm> Put(string url, string jsonText, IEnumerable<OwnFile> files, Dictionary<string, string> httpHeaders = null);
+      Task<ResponseVm> Put(string url, string jsonText, IEnumerable<FileVm> files, Dictionary<string, string> httpHeaders = null);
 
       /// <summary>
       /// Send 'DELETE' request
@@ -96,7 +96,7 @@ namespace Tch.RestClient.Interfaces
       /// <param name="files">One of more files that will be sent along embedded in http request</param>
       /// <param name="httpHeaders">Optional dictionary with http headers</param>
       /// <returns>View model of http response</returns>
-      Task<ResponseVm> Patch(string url, string jsonText, IEnumerable<OwnFile> files, Dictionary<string, string> httpHeaders = null);
+      Task<ResponseVm> Patch(string url, string jsonText, IEnumerable<FileVm> files, Dictionary<string, string> httpHeaders = null);
 
       /// <summary>
       /// Send 'POST' request
@@ -123,6 +123,6 @@ namespace Tch.RestClient.Interfaces
       /// <param name="files">One of more files that will be sent along embedded in http request</param>
       /// <param name="httpHeaders">Optional dictionary with http headers</param>
       /// <returns>View model of http response</returns>
-      Task<ResponseVm> Post(string url, string jsonText, IEnumerable<OwnFile> files, Dictionary<string, string> httpHeaders = null);
+      Task<ResponseVm> Post(string url, string jsonText, IEnumerable<FileVm> files, Dictionary<string, string> httpHeaders = null);
    }
 }

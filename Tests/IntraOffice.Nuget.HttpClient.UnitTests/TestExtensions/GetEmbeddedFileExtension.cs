@@ -585,12 +585,12 @@ namespace Tch.RestClient.UnitTests.TestExtensions
       /// <param name="assembly"></param>
       /// <param name="embeddedFileName"></param>
       /// <returns></returns>
-      public static OwnFile GetEmbeddedFile(this Assembly assembly, string embeddedFileName)
+      public static FileVm GetEmbeddedFile(this Assembly assembly, string embeddedFileName)
       {
          var fileExtension = Path.GetExtension(embeddedFileName);
          var contentType = GuessMimeType(fileExtension);
          var embeddedBytes = assembly.GetEmbeddedBytes(embeddedFileName);
-         return new OwnFile {Content = embeddedBytes, ContentType = contentType, FileName = embeddedFileName};
+         return new FileVm {Content = embeddedBytes, ContentType = contentType, FileName = embeddedFileName};
       }
 
       internal static string GuessMimeType(string extension)

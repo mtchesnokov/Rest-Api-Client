@@ -14,7 +14,7 @@ namespace Tch.RestClient.Interfaces.Basic
 
       Task<ResponseVm> Send(HttpMethod httpMethod, string url, string jsonText, Dictionary<string, string> httpHeaders = null, RestClientOptions options = null);
 
-      Task<ResponseVm> Send(HttpMethod httpMethod, string url, string jsonText, IEnumerable<OwnFile> files, Dictionary<string, string> httpHeaders, RestClientOptions options = null);
+      Task<ResponseVm> Send(HttpMethod httpMethod, string url, string jsonText, IEnumerable<FileVm> files, Dictionary<string, string> httpHeaders, RestClientOptions options = null);
 
       Task<HttpResponseMessage> SendRaw(HttpMethod httpMethod, string url, string jsonText = null, Dictionary<string, string> httpHeaders = null, RestClientOptions options = null);
    }

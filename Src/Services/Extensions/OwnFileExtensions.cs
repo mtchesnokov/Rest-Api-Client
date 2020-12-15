@@ -6,18 +6,18 @@ namespace Tch.RestClient.Services.Extensions
 {
    internal static class OwnFileExtensions
    {
-      public static HttpContent ToHttpContent(this OwnFile file)
+      public static HttpContent ToHttpContent(this FileVm fileVm)
       {
-         var binaryContent = new ByteArrayContent(file.Content);
+         var binaryContent = new ByteArrayContent(fileVm.Content);
 
-         if (!string.IsNullOrEmpty(file.ContentType))
+         if (!string.IsNullOrEmpty(fileVm.ContentType))
          {
-            binaryContent.Headers.ContentType = new MediaTypeHeaderValue(file.ContentType);
+            binaryContent.Headers.ContentType = new MediaTypeHeaderValue(fileVm.ContentType);
          }
 
-         if (!string.IsNullOrEmpty(file.FileName))
+         if (!string.IsNullOrEmpty(fileVm.FileName))
          {
-            binaryContent.Headers.ContentDisposition = new ContentDispositionHeaderValue("attachment") { FileName = file.FileName };
+            binaryContent.Headers.ContentDisposition = new ContentDispositionHeaderValue("attachment") { FileName = fileVm.FileName };
          }
 
          return binaryContent;
